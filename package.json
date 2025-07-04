@@ -1,13 +1,13 @@
 {
   "name": "backend",
   "version": "1.0.0",
-"main": "app/index.js",
-"scripts": {
-  "start": "node app/index.js",
-  "dev": "nodemon app/index.js",
-  "build": "echo \"No build step for API-only project\"",
-  "vercel-dev": "vercel dev"
-},
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "dev": "nodemon app/index.js",
+    "build": "echo \"No build step for API-only project\"",
+    "vercel-dev": "vercel dev"
+  },
   "dependencies": {
     "@paypal/checkout-server-sdk": "^1.0.3",
     "bcrypt": "^5.1.1",
