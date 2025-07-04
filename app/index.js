@@ -14,6 +14,11 @@ app.use(cors({
 
 // parse JSON bodies
 app.use(express.json());
+// Catch any unhandled errors in your request pipeline:
+app.use((err, req, res, next) => {
+  console.error('🔥 Unhandled error:', err.stack || err);
+  res.status(500).json({ error: 'Internal Server Error' });
+});
 
 // mount auth routes
 app.use('/api/auth', authRoutes);

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "app/index.js",
   "scripts": {
-    "start": "node app/index.js",
-    "dev": "nodemon app/index.js",
-    "build": "echo \"No build step for API-only project\"",
+    "start": "node init && node app/index.js",
+    "dev": "node init && nodemon app/index.js",
+    "build": "node init && echo \"No build step for API-only project\"",
     "vercel-dev": "vercel dev"
   },
   "dependencies": {
