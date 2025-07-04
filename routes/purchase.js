@@ -9,8 +9,8 @@ const router = express.Router();
 
 /* ---------- PayPal client ---------- */
 const payEnv   = new paypal.core.SandboxEnvironment(
-  process.env.PAYPAL_CLIENT_ID,
-  process.env.PAYPAL_CLIENT_SECRET
+  'AftLDvxL_UjEtmlHPOL5AptiEIIhbyYOYO55zYFj_bXZnS16sNFZaB_a06j63FO4XB-NY3CdjCpO_IqF',
+  'EF_6JBo1OM7xBw1DJX-ml9QWw-tABPnpDE5QnNBrhiSL2lXipwlkD6IRRF0TtHjON7Igx5LcY1SQFMJm'
 );
 const payClient = new paypal.core.PayPalHttpClient(payEnv);
 
@@ -19,7 +19,7 @@ function authenticateToken(req, res, next) {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) return res.status(401).json({ error: 'Unauthorized' });
 
-  jwt.verify(token, process.env.JWT_SECRET, (err, payload) => {
+  jwt.verify(token, 'process.env.JWT_SECRET', (err, payload) => {
     if (err) return res.status(403).json({ error: 'Forbidden' });
     req.userId = payload.userId;
     next();

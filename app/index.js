@@ -22,7 +22,7 @@ app.use('/api/contact', contact);
 // health check
 app.get('/', (req, res) => res.send('🚀 Auth API is running'));
 
-const PORT = process.env.PORT || 4000;
+const PORT =  4000;
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
