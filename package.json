@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "start": "node app/index.js",
     "dev": "nodemon app/index.js",
+    "build": "echo \"No build step for API-only project\"",
     "vercel-dev": "vercel dev"
   },
   "keywords": [],
